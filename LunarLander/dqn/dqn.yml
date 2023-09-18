@@ -1,0 +1,17 @@
+LunarLander-v2:
+  # frame_stack: 4
+  frame_stack: 4
+  policy: "MlpPolicy"
+  n_timesteps: !!float 1e6
+  buffer_size: 100000
+  learning_rate: !!float 1e-4
+  batch_size: 32
+  learning_starts: 100000
+  target_update_interval: 1000
+  train_freq: 4
+  gradient_steps: 1
+  exploration_fraction: 0.1
+  exploration_final_eps: 0.01
+  # If True, you need to deactivate handle_timeout_termination
+  # in the replay_buffer_kwargs
+  optimize_memory_usage: False
